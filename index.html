@@ -1,233 +1,157 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        
-        <title>KÜBRA</title>
-        <link rel="icon" type="image" href="./images/download.png">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./css.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
-        <script src="./home.js" defer></script> 
-    </head>
-    <body>
-        <header>
+<head>
+    <title>KÜBRA</title>
+    <link rel="icon" type="image" href="./images/download.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./home.js" defer></script> 
+</head>
+<body>
+    <header></header>
 
-          </header>
-
-          <main class="ma">
-            
-            <!-- <h1 class="h2x">HAPPY BIRTHDAY</h1> -->
-            <!-- <h1 class="h1x">TO THZ BAST ONE I KNOW IN MY LIFE HAPPY BIRTHDAY</h1> -->
-
-            <div class="xx" id="1">
+    <main class="ma">
+        <div class="xx" id="1">
             <p class="text">en sevdiğin renk ne Sadece büyük harf kullanın.</p>
-
             <center>
-               <input type="password" placeholder="BIG LETTER ONLY" id="1Q">
+               <input type="text" placeholder="BIG LETTER ONLY" id="1Q">
                <button onclick="protectpasscode1()">CHECK</button>
                <script>
                   function protectpasscode1() {
                      const result = document.getElementById("1Q").value;
                      let passcode1 = "YEŞİL";
-                     let space = '';
-                     if (result == space) {
-                        alert("Type passcode")
-                     } else {
-                        if (result == passcode1) {
-                           document.getElementById("1").style.visibility = "hidden";
-                           document.getElementById("2").style.visibility = "visible";
-                        } else {
-                           alert("Incorrect Passcode");
-
-                        }
-                     }
+                     if (!result) { alert("Type passcode"); return; }
+                     if (result === passcode1) {
+                        document.getElementById("1").style.visibility = "hidden";
+                        document.getElementById("2").style.visibility = "visible";
+                     } else { alert("Incorrect Passcode"); }
                   }
                </script>
             </center>
-
         </div>
-        <div class="xx" id="2" style="visibility: hidden;" >
-         <p class="text">Bir kitap okudum ve o kitapta bir karakteri sevdin? İsmi neydi Sadece büyük harf kullanın.</p>
 
-         <center>
-            <input type="password" placeholder="BIG LETTER ONLY" id="2Q">
-            <button onclick="protectpasscode2()">CHECK</button>
-            <script>
-               function protectpasscode2() {
-                  const result = document.getElementById("2Q").value;
-                  let passcode2 = "ZEZE";
-                  let space = '';
-                  if (result == space) {
-                     alert("Type passcode")
-                  } else {
-                     if (result == passcode2) {
-                           document.getElementById("2").style.visibility = "hidden";
-                           document.getElementById("3").style.visibility = "visible";
-                     } else {
-                        alert("Incorrect Passcode");
+        <div class="xx" id="2" style="visibility: hidden;">
+            <p class="text">Bir kitap okudum ve o kitapta bir karakteri sevdin? İsmi neydi Sadece büyük harf kullanın.</p>
+            <center>
+                <input type="text" placeholder="BIG LETTER ONLY" id="2Q">
+                <button onclick="protectpasscode2()">CHECK</button>
+                <script>
+                   function protectpasscode2() {
+                      const result = document.getElementById("2Q").value;
+                      let passcode2 = "ZEZE";
+                      if (!result) { alert("Type passcode"); return; }
+                      if (result === passcode2) {
+                         document.getElementById("2").style.visibility = "hidden";
+                         document.getElementById("3").style.visibility = "visible";
+                      } else { alert("Incorrect Passcode"); }
+                   }
+                </script>
+            </center>
+        </div>
 
-                     }
+        <div class="xx" id="3" style="visibility: hidden;">
+            <p class="text">En sevdiğin hayvan Sadece büyük harf kullanın.</p>
+            <center>
+               <input type="text" placeholder="BIG LETTER ONLY" id="3Q">
+               <button onclick="protectpasscode3()">CHECK</button>
+               <script>
+                  function protectpasscode3() {
+                     const result = document.getElementById("3Q").value;
+                     let passcode3 = "FİL";
+                     if (!result) { alert("Type passcode"); return; }
+                     if (result === passcode3) {
+                        document.getElementById("3").style.visibility = "hidden";
+                        document.getElementById("4").style.visibility = "visible";
+                     } else { alert("Incorrect Passcode"); }
                   }
-               }
-            </script>
-         </center>
+               </script>
+            </center>
+        </div>
 
-     </div>
+        <div class="xx" id="4" style="visibility: hidden;">
+           <p class="text">bir rakam tut</p>
+           <center>
+              <input type="text" placeholder="BIG LETTER ONLY" id="4Q">
+              <button onclick="protectpasscode4()">CHECK</button>
+              <script>
+                 function protectpasscode4() {
+                    const result = document.getElementById("4Q").value;
+                    let passcode4 = "5";
+                    if (!result) { alert("Type passcode"); return; }
+                    if (result === passcode4) {
+                       document.getElementById("4").style.visibility = "hidden";
+                       document.getElementById("6").style.visibility = "visible";
+                    } else {
+                       document.getElementById("4").style.visibility = "hidden";
+                       document.getElementById("5").style.visibility = "visible";
+                    }
+                 }
+              </script>
+           </center>
+        </div>
 
-     <div class="xx" id="3" style="visibility: hidden;" >
-      <p class="text">En sevdiğin hayvan Sadece büyük harf kullanın.</p>
+        <div class="xx" id="5" style="visibility: hidden;">
+           <p class="text">Bilmedin bir tane daha tut</p>
+           <center>
+              <input type="text" placeholder="BIG LETTER ONLY" id="5Q">
+              <button onclick="protectpasscode5()">CHECK</button>
+              <script>
+                 function protectpasscode5() {
+                    const result = document.getElementById("5Q").value;
+                    let passcode5 = "5";
+                    if (!result) { alert("Type passcode"); return; }
+                    if (result === passcode5) {
+                       document.getElementById("5").style.visibility = "hidden";
+                       document.getElementById("6").style.visibility = "visible";
+                    } else { alert("Incorrect Passcode"); }
+                 }
+              </script>
+           </center>
+        </div>
 
-      <center>
-         <input type="password" placeholder="BIG LETTER ONLY" id="3Q">
-         <button onclick="protectpasscode3()">CHECK</button>
-         <script>
-            function protectpasscode3() {
-               const result = document.getElementById("3Q").value;
-               let passcode3 = "FİL";
-               let space = '';
-               if (result == space) {
-                  alert("Type passcode")
-               } else {
-                  if (result == passcode3) {
-                     document.getElementById("3").style.visibility = "hidden";
-                     document.getElementById("4").style.visibility = "visible";
-                  } else {
-                     alert("Incorrect Passcode");
+        <div class="xx" id="6" style="visibility: hidden;">
+           <p class="text">en çok görmek istediğin şey ne? AURORA-ŞELALE-BEN-AY Sadece büyük harf kullanın.</p>
+           <center>
+              <input type="text" placeholder="BIG LETTER ONLY" id="6Q">
+              <button onclick="protectpasscode6()">CHECK</button>
+              <script>
+                 function protectpasscode6() {
+                    const result = document.getElementById("6Q").value;
+                    let passcode6 = "AURORA";
+                    if (!result) { alert("Type passcode"); return; }
+                    if (result === passcode6) {
+                       document.getElementById("6").style.visibility = "hidden";
+                       document.getElementById("7").style.visibility = "visible";
+                    } else { alert("Incorrect Passcode"); }
+                 }
+              </script>
+           </center>
+        </div>
 
-                  }
-               }
-            }
-         </script>
-      </center>
-
-  </div>
-
-
-  <div class="xx" id="4" style="visibility: hidden;" >
-   <p class="text">bir rakam tut</p>
-
-   <center>
-      <input type="password" placeholder="BIG LETTER ONLY" id="4Q">
-      <button onclick="protectpasscode4()">CHECK</button>
-      <script>
-         function protectpasscode4() {
-            const result = document.getElementById("4Q").value;
-            let passcode4 = "5";
-            let space = '';
-            if (result == space) {
-               alert("Type passcode")
-            } else {
-               if (result == passcode4) {
-                  document.getElementById("4").style.visibility = "hidden";
-                  document.getElementById("6").style.visibility = "visible";
-               } else {
-                  document.getElementById("4").style.visibility = "hidden";
-                  document.getElementById("5").style.visibility = "visible";
-
-               }
-            }
-         }
-      </script>
-   </center>
-
-</div>
-
-<div class="xx" id="5" style="visibility: hidden;" >
-   <p class="text">Bilmedin bir tane daha tut</p>
-
-   <center>
-      <input type="password" placeholder="BIG LETTER ONLY" id="5Q">
-      <button onclick="protectpasscode5()">CHECK</button>
-      <script>
-         function protectpasscode5() {
-            const result = document.getElementById("5Q").value;
-            let passcode5 = "5";
-            let space = '';
-            if (result == space) {
-               alert("Type passcode")
-            } else {
-               if (result == passcode5) {
-                  document.getElementById("5").style.visibility = "hidden";
-                  document.getElementById("6").style.visibility = "visible";
-               } else {
-                  alert("Incorrect Passcode");
-
-               }
-            }
-         }
-      </script>
-   </center>
-
-</div>
-
-
-<div class="xx" id="6" style="visibility: hidden;" >
-   <p class="text">en çok görmek istediğin şey ne? AURORA-ŞELALE-BEN-AY Sadece büyük harf kullanın.</p>
-
-   <center>
-      <input type="password" placeholder="BIG LETTER ONLY" id="6Q">
-      <button onclick="protectpasscode6()">CHECK</button>
-      <script>
-         function protectpasscode6() {
-            const result = document.getElementById("6Q").value;
-            let passcode6 = "AURORA";
-            let space = '';
-            if (result == space) {
-               alert("Type passcode")
-            } else {
-               if (result == passcode6) {
-                  document.getElementById("6").style.visibility = "hidden";
-                  document.getElementById("7").style.visibility = "visible";
-               } else {
-                  alert("Incorrect Passcode");
-
-               }
-            }
-         }
-      </script>
-   </center>
-
-</div>
-
-
-
-  <div class="xx" id="7" style="visibility: hidden;" >
-   <p class="text">BEN ÖZGÜR BIR KADINIM YZ Sadece büyük harf kullanın.</p>
-
-   <center>
-      <input type="password" placeholder="BIG LETTER ONLY" id="7Q">
-      <button onclick="protectpasscode7()">CHECK</button>
-      <script>
-         function protectpasscode7() {
-            const result = document.getElementById("7Q").value;
-            let passcode7 = "BEN ÖZGÜR BIR KADINIM";
-            let space = '';
-            if (result == space) {
-               alert("Type passcode")
-            } else {
-               if (result == passcode7) {
-                 window.location.assign("https://ahmad199617.github.io/IROS/");
-               } else {
-                  alert("Incorrect Passcode");
-
-               }
-            }
-         }
-      </script>
-   </center>
-
-</div>
-
-
-
-
-          </main>
-    </body>
+        <div class="xx" id="7" style="visibility: hidden;">
+           <p class="text">BEN ÖZGÜR BIR KADINIM YZ Sadece büyük harf kullanın.</p>
+           <center>
+              <input type="text" placeholder="BIG LETTER ONLY" id="7Q">
+              <button onclick="protectpasscode7()">CHECK</button>
+              <script>
+                 function protectpasscode7() {
+                    const result = document.getElementById("7Q").value;
+                    let passcode7 = "BEN ÖZGÜR BIR KADINIM";
+                    if (!result) { alert("Type passcode"); return; }
+                    if (result === passcode7) {
+                      window.location.assign("https://ahmad199617.github.io/KUBRA/");
+                    } else { alert("Incorrect Passcode"); }
+                 }
+              </script>
+           </center>
+        </div>
+    </main>
+</body>
 </html>
